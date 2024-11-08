@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/register.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <div class="mainForRegister">
+        <div>
+            <strong class="registerTitle">
+                Register with Clever
+            </strong>
+        </div>
+        <div class="create">
+            <form action="/register/form" method="POST">
+                <div class="info">
+                    <div class="email">
+                        <label for="email">
+                            Enter your email
+                            <br>
+                            <input type="email" name="email" placeholder="email..." id="email">
+                        </label>
+                    </div>
+                    <div class="username">
+                        <label for="">
+                            Enter your username
+                            <br>
+                            <input type="text" name="username" placeholder="username..." id="username" >
+                        </label>
+                    </div>
+                    <div class="password">
+                        <label for="password">
+                            Enter your password
+                            <br>
+                            <input type="password" name="password" placeholder="password..." id="password">
+                        </label>
+                    </div>
+                </div>
+                <a href="/login" target="_blank" rel="noopener noreferrer">one account? Login</a>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+* {
+    padding: none;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main > div > .title {
+    margin-block-end: 7px;
+}
+
+.main > div > .title > strong {
+    color: green;
+}

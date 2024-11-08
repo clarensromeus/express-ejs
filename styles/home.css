@@ -1,0 +1,64 @@
+* {
+    margin: none;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .userTitle > strong {
+    color: green;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.main .allusers {
+    margin-block-start: 10px;
+}
+
+.main .allusers .user {
+    margin-block-start: 10px;
+    border-top: 1px solid black;
+}
+
+.main .allusers .user .datainfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .allusers .user .datainfo .actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+
+
+.main .allusers .user .datainfo .actions .del {
+    background-color: red;
+    padding-inline: 5px;
+}
+
+.main .allusers .user .datainfo .actions .del > a {
+    text-decoration: none;
+}
+
+.main .allusers .user .datainfo .actions .edit  {
+   background-color: green;
+   padding-inline: 5px;
+}
+
+.main .allusers .user .datainfo .actions .edit > a {
+    text-decoration: none;
+}
+
+.main .allusers .user .datainfo .actions .del > a > strong {
+    color: white;
+}
+
+.main .allusers .user .datainfo .actions .edit > a > strong {
+    color: white;
+}

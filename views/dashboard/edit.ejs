@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/edit.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <div class="title">
+                <strong>Edit user with email <strong><%= singleUser.email %></strong> </strong>
+            </div>
+            <div>
+                <form action="/dashboard/home/edit/form/user" method="post">
+                    <div>
+                        <input type="text" name="username" id="username" placeholder="username..." value="<%= singleUser.username %>">
+                        <input type="email" name="email" id="email" placeholder="email..." value="<%= singleUser.email %>">
+                        <input type="password" name="password" id="password" placeholder="password..." value="<%= singleUser.password %>">
+                        <button type="submit">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

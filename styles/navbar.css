@@ -1,0 +1,29 @@
+* {
+    padding: none;
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 100%;
+    border-block-end: 1px solid black;
+}
+
+.nav > div {
+    margin-block-start: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav > div .left > span {
+    font-weight: bolder;
+    font-size: 2rem;
+    color: green;
+}
+
+.nav > div .right > ul {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+

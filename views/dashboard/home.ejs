@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+<body>
+    <div>
+        <%- include('./navbar.ejs', {title: "go"}); %>
+    </div>
+   
+    <div class="main">
+        <div>
+            <div>
+                <div><strong>Add a user</strong></div>
+                <div>
+                    <form action="/dashboard/home/add/user" method="post">
+                        <div>
+                                <input type="text" name="username" id="username" placeholder="username...">
+                                <input type="email" name="email" id="email" placeholder="email...">
+                                <input type="password" name="password" id="password" placeholder="password...">
+                                <button type="submit">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="userTitle"><strong>list of all users</strong></div>
+            <div class="allUsers">
+                <% if (users.length > 0) { %>
+                    <div>
+                    <% users.forEach(function(user){ %>
+                    <div class="user">
+                        <div class="datainfo">
+                            <div>
+                                <div>
+                                    <strong>
+                                        <%= user.username %>
+                                    </strong>
+                                </div>
+                                <div>
+                                    <span>
+                                        <%= user.email %>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="del">
+                                    <a href="/dashboard/home/user/delete/<%= user.email %>">
+                                       <strong>del</strong>
+                                    </a>
+                                </div>
+                                <div class="edit">
+                                    <a href="/dashboard/home/edit/<%= user.username %>"><strong>edit</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                    <% }); %>
+                    </div>
+                <% } %>
+                <% if (users.length <= 0) { %>
+                    <div><strong>No Users</strong></div>
+                <% } %>
+            </div>
+           </strong>
+        </div>
+        <div class="users">
+        </div>
+    </div>
+</body>
+</html>
